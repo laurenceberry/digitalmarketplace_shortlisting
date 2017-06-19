@@ -1,0 +1,92 @@
+opportunities:
+  - opportunity: 1
+    name: Technical Architect
+    status: shortlisting
+    applications:
+      - application: 
+        name: Test Supplier 1
+        id: 1 
+      - application: 
+        name: Test Supplier 2
+        id: 2
+      - application: 
+        name: Test Supplier 3
+        id: 3 
+
+
+  - opportunity: 2
+    name: Technical Architect
+    status: shortlisting
+    applications:
+      - application: 
+        name: Test Supplier 4
+        id: 4
+      - application: 
+        name: Test Supplier 5
+        id: 5
+      - application: 
+        name: Test Supplier 6
+        id: 6 
+      - application: 
+        name: Test Supplier 4
+        id: 4
+      - application: 
+        name: Test Supplier 5
+        id: 5
+      - application: 
+        name: Test Supplier 6
+        id: 6 
+      - application: 
+        name: Test Supplier 4
+        id: 4
+      - application: 
+        name: Test Supplier 5
+        id: 5
+      - application: 
+        name: Test Supplier 6
+        id: 6 
+      - application: 
+        name: Test Supplier 4
+        id: 4
+      - application: 
+        name: Test Supplier 5
+        id: 5
+      - application: 
+        name: Test Supplier 6
+        id: 6 
+      - application: 
+        name: Test Supplier 4
+        id: 4
+      - application: 
+        name: Test Supplier 5
+        id: 5
+      - application: 
+        name: Test Supplier 6
+        id: 6 
+      - application: 
+        name: Test Supplier 4
+        id: 4
+      - application: 
+        name: Test Supplier 5
+        id: 5
+      - application: 
+        name: Test Supplier 6
+        id: 6 
+      - application: 
+        name: Test Supplier 4
+        id: 4
+      - application: 
+        name: Test Supplier 5
+        id: 5
+      - application: 
+        name: Test Supplier 6
+        id: 6 
+      - application: 
+        name: Test Supplier 4
+        id: 4
+      - application: 
+        name: Test Supplier 5
+        id: 5
+      - application: 
+        name: Test Supplier 6
+        id: 6 
