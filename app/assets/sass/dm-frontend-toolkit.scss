@@ -1,0 +1,50 @@
+/* Classes shared between multiple apps */
+@import "digitalmarketplace-frontend-toolkit/shared_scss/_reset.scss";
+@import "digitalmarketplace-frontend-toolkit/shared_scss/_lists.scss";
+@import "digitalmarketplace-frontend-toolkit/shared_scss/_dmspeak.scss";
+
+/* Blocks shared between multiple selectors */
+@import "digitalmarketplace-frontend-toolkit/shared_placeholders/_dm-typography.scss";
+@import "digitalmarketplace-frontend-toolkit/shared_placeholders/_mixins.scss";
+@import "digitalmarketplace-frontend-toolkit/shared_placeholders/_placeholders.scss";
+@import "digitalmarketplace-frontend-toolkit/shared_placeholders/_temporary-messages.scss";
+@import "digitalmarketplace-frontend-toolkit/shared_placeholders/_visuallyhidden.scss";
+
+#wrapper, .wrapper {
+  @extend %site-width-container;
+}
+
+#content {
+  @extend %contain-floats;
+  clear: both;
+  margin-bottom: $gutter * 2;
+}
+
+// Digital Marketplace Front-end toolkit styles
+@import "digitalmarketplace-frontend-toolkit/_breadcrumb.scss";
+@import "digitalmarketplace-frontend-toolkit/_browse-list.scss";
+@import "digitalmarketplace-frontend-toolkit/_buttons.scss";
+@import "digitalmarketplace-frontend-toolkit/_contact-details";
+@import "digitalmarketplace-frontend-toolkit/_digital-marketplace-colours.scss";
+@import "digitalmarketplace-frontend-toolkit/_document";
+@import "digitalmarketplace-frontend-toolkit/_grids.scss";
+@import "digitalmarketplace-frontend-toolkit/_instruction-list.scss";
+@import "digitalmarketplace-frontend-toolkit/_link-button";
+@import "digitalmarketplace-frontend-toolkit/_notification-banners.scss";
+@import "digitalmarketplace-frontend-toolkit/_page-headings.scss";
+@import "digitalmarketplace-frontend-toolkit/_phase-banner.scss";
+@import "digitalmarketplace-frontend-toolkit/_secondary-action-link.scss";
+@import "digitalmarketplace-frontend-toolkit/_service-id.scss";
+@import "digitalmarketplace-frontend-toolkit/_temporary-message.scss";
+@import "digitalmarketplace-frontend-toolkit/forms/_hint.scss";
+@import "digitalmarketplace-frontend-toolkit/forms/_pricing.scss";
+@import "digitalmarketplace-frontend-toolkit/forms/_questions.scss";
+@import "digitalmarketplace-frontend-toolkit/forms/_selection-buttons.scss";
+@import "digitalmarketplace-frontend-toolkit/forms/_summary.scss";
+@import "digitalmarketplace-frontend-toolkit/forms/_textboxes.scss";
+@import "digitalmarketplace-frontend-toolkit/forms/_upload.scss";
+@import "digitalmarketplace-frontend-toolkit/forms/_validation.scss";
+@import "digitalmarketplace-frontend-toolkit/forms/_combinations.scss";
+@import "digitalmarketplace-frontend-toolkit/forms/_checkbox-tree.scss";
+@import "digitalmarketplace-frontend-toolkit/search/_search-result.scss";
+@import "digitalmarketplace-frontend-toolkit/search/_search-summary.scss";

@@ -28,6 +28,7 @@ gulp.task('copy-govuk-modules', [
   'copy-template-assets',
   'copy-elements-sass',
   'copy-template'
+  //'copy-dm-toolkit-sass'
 ])
 
 gulp.task('watch', function (done) {

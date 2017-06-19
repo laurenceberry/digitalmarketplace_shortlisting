@@ -12,6 +12,7 @@ gulp.task('copy-toolkit', function () {
   .pipe(gulp.dest(config.paths.govukModules + '/govuk_frontend_toolkit/'))
 })
 
+
 gulp.task('copy-template', function () {
   return gulp.src(['node_modules/govuk_template_jinja/views/layouts/**'])
   .pipe(gulp.dest(config.paths.govukModules + '/govuk_template/layouts/'))
@@ -26,4 +27,9 @@ gulp.task('copy-template-assets', function () {
 gulp.task('copy-elements-sass', function () {
   return gulp.src(['node_modules/govuk-elements-sass/public/sass/**'])
   .pipe(gulp.dest(config.paths.govukModules + '/govuk-elements-sass/'))
+})
+
+gulp.task('copy-dm-toolkit-sass', function () {
+  return gulp.src(['node_modules/digitalmarketplace-frontend-toolkit/toolkit/scss/**'])
+  .pipe(gulp.dest(config.paths.assets + '/sass/digitalmarketplace-frontend-toolkit/'))
 })
