@@ -32,3 +32,9 @@ $path: "/public/images/";
 }
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+table{
+  th, td{
+    font-size: 16px;
+  }
+}

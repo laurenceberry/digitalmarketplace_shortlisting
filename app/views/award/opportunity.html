@@ -1,0 +1,605 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+
+<main id="content" role="main">
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="/award/email/award?opportunity_id=1">Digital Marketplace</a></li>
+    </ol>
+  </div>
+    <div class="grid-row">
+      <div class="column-two-thirds padding-bottom">
+        <header class="page-heading-smaller">
+          
+            <p class="context">
+              Home Office
+            </p>
+            <h1>
+              Digital Customer Programme Discovery Phase
+            </h1>
+          
+        </header>
+      </div>
+    </div>
+
+
+    <div class="grid-row" style="margin-bottom: 25px;">
+      <div class="column-one-whole">
+        <p><span style="font-weight: bold">Status: </span>Awarded to {{data['awarded_supplier']}}</p>
+      </div>
+    </div>
+
+    <div class="grid-row  padding-bottom-large">
+      <div class="column-one-third">
+        <p class="search-summary" style="font-size: 19px;  margin-bottom: 10px">
+          <span class="search-summary-count">4</span> suppliers interested 
+        </p>
+        <p class="search-summary" style="font-size: 19px">
+          <span>
+            3 small and medium enterprises<br> 1 large organisation
+          </span>
+        </p>
+      </div>
+      <div class="column-one-third">
+        <p class="search-summary" style="margin-left: 0; font-size: 19px; margin-bottom: 10px">
+          <span class="search-summary-count">2</span> suppliers applied
+        </p>
+        <p class="search-summary" style="font-size: 19px">
+          <span>
+            2 small and medium enterprises
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div class="grid-row">
+
+
+    
+      <div class="column-one-whole">
+        <h2 class="summary-item-heading visuallyhidden" id="opportunity-attributes-1">
+          Important dates
+        </h2>
+        <table class="summary-item-body">
+          <caption class="visuallyhidden">
+            Important dates
+          </caption>
+
+          <thead class="summary-item-field-headings">
+            <tr>
+              <th scope="col" class="summary-item-field-heading-first">
+                <span class="visuallyhidden">Opportunity attribute name</span>
+              </th>
+              <th scope="col" class="summary-item-field-heading">
+                <span class="visuallyhidden">Opportunity attribute value</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Published</span>
+              </td>
+              <td class="summary-item-field">
+                <span>Tuesday 7 March</span>
+              </td>
+            </tr>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Deadline for asking questions</span>
+              </td>
+              <td class="summary-item-field">
+                <span>Tuesday 14 March</span>
+              </td>
+            </tr>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Closing date for applications</span>
+              </td>
+              <td class="summary-item-field">
+                <span id="">Tuesday 21 March</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 class="summary-item-heading" id="opportunity-attributes-1">
+          Overview
+        </h2>
+        <table class="summary-item-body">
+          <caption class="visuallyhidden">
+            Overview
+          </caption>
+          <thead class="summary-item-field-headings">
+            <tr>
+              <th scope="col" class="summary-item-field-heading-first">
+                <span class="visuallyhidden">Opportunity attribute name</span>
+              </th>
+              <th scope="col" class="summary-item-field-heading">
+                <span class="visuallyhidden">Opportunity attribute value</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Summary of the work</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  Newham Council require a supplier with specialist capability and experience in transforming large scale, complex legacy technology and services into efficient modern solutions, to provide a team for a 10 week Discovery phase as part of its Digital Customer Programme, aligned to the Digital By Default Service Standard.
+
+                </span>
+              </td>
+            </tr>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Latest start date</span>
+              </td>
+              <td class="summary-item-field">
+                <span id="startDateDisplay">undefined NaN undefined</span>
+              </td>
+            </tr>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Expected contract length</span>
+              </td>
+              <td class="summary-item-field">
+                <span>10 week Discovery Phase</span>
+              </td>
+            </tr>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Region</span>
+              </td>
+              <td class="summary-item-field">
+                <span>London</span>
+              </td>
+
+            </tr>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Organisation the work is for</span>
+              </td>
+              <td class="summary-item-field">
+                <span>Newham Council</span>
+              </td>
+            </tr>
+            
+              <tr class="summary-item-row">
+                <td class="summary-item-field-first">
+                  <span>Budget range</span>
+                </td>
+                <td class="summary-item-field">
+                  There is a fixed cost budget of £90,000.00 (exclusive of VAT)
+                </td>
+              </tr>
+              
+          </tbody>
+        </table>
+        <h2 class="summary-item-heading" id="opportunity-attributes-2">
+          About the work
+        </h2>
+        <table class="summary-item-body">
+          <caption class="visuallyhidden">
+            About the work
+          </caption>
+          <thead class="summary-item-field-headings">
+            <tr>
+              <th scope="col" class="summary-item-field-heading-first">
+                <span class="visuallyhidden">Opportunity attribute name</span>
+              </th>
+              <th scope="col" class="summary-item-field-heading">
+                <span class="visuallyhidden">Opportunity attribute value</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Why the work is being done</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  Our aspiration is to pioneer change by creating a resilient council and community that shapes Newham as a place where people choose to live, work and stay. We are transforming the way we work to be more effective, commercial, innovative and pioneering in how we deliver the services our residents say matter most to them. Our vision is for services to be Digital by Default ; while saving money and improving the user experience. We require a specialist team to work with us on a Discovery phase as part of the Digital Customer Programme.
+
+                </span>
+              </td>
+            </tr>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Problem to be solved</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  While many transactions have been moved online, the user experience is fragmented and often confusing, relying on inefficient, manual intervention for a number of transactions. There is an opportunity to make savings by improving the user experience in the broadest sense and to develop an evidenced based digital roadmap to deliver digital tools that meet user needs and support organisational goals for the future.
+
+                </span>
+              </td>
+            </tr>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Who the users are and what they need to do</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  The discovery phase should identify who the users are and what they need to do. At a high level the users are Newham residents, partners, businesses and other organisations. Within the council the users are those who commission services. Newham Council provides a range of services to users including adult and children health and social care, advice and benefits, housing, community and living, environment and planning, education and learning, jobs and careers, leisure and culture, transport and streets.. A more complete list is available on the Council website www.newham.gov.uk.
+                </span>
+              </td>
+            </tr>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Who the users are and what they need to do</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  The discovery phase should identify who the users are and what they need to do. At a high level the users are Newham residents, partners, businesses and other organisations. Within the council the users are those who commission services. Newham Council provides a range of services to users including adult and children health and social care, advice and benefits, housing, community and living, environment and planning, education and learning, jobs and careers, leisure and culture, transport and streets.. A more complete list is available on the Council website www.newham.gov.uk.
+                </span>
+              </td>
+            </tr>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Any work that’s already been done</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  We recently carried out an analysis of all activity across the council to identify savings and service improvements, and our business case has now been approved. There are a number of projects and programmes which have an impact on or dependency with the Digital Customer Programme. Newham has a growing understanding and appreciation of the scope and management of Discovery phases, and has run agile projects and programmes in the past.
+
+                </span>
+              </td>
+            </tr>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Existing team</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  
+                </span>
+              </td>
+            </tr>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Current phase</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  Not started
+                </span>
+              </td>
+            </tr>
+            
+          </tbody>
+        </table>
+        <h2 class="summary-item-heading" id="opportunity-attributes-3">
+          Work setup
+        </h2>
+        <table class="summary-item-body">
+          <caption class="visuallyhidden">
+            Work setup
+          </caption>
+          <thead class="summary-item-field-headings">
+            <tr>
+              <th scope="col" class="summary-item-field-heading-first">
+                <span class="visuallyhidden">Opportunity attribute name</span>
+              </th>
+              <th scope="col" class="summary-item-field-heading">
+                <span class="visuallyhidden">Opportunity attribute value</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Address where the work will take place</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  London Borough of Newham, Newham Dockside, 1000 Dockside Road, London E16 2QU
+
+                </span>
+              </td>
+            </tr>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Working arrangements</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  Monday to Friday on site. A professional working day, hours and working pattern as needed to deliver the service in an efficient way. Mainly based from our office in Dockside, London.
+
+                </span>
+              </td>
+            </tr>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Security clearance</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 class="summary-item-heading" id="opportunity-attributes-4">
+          Additional information
+        </h2>
+        <table class="summary-item-body">
+          <caption class="visuallyhidden">
+            Additional information
+          </caption>
+          <thead class="summary-item-field-headings">
+            <tr>
+              <th scope="col" class="summary-item-field-heading-first">
+                <span class="visuallyhidden">Opportunity attribute name</span>
+              </th>
+              <th scope="col" class="summary-item-field-heading">
+                <span class="visuallyhidden">Opportunity attribute value</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="summary-item-row">
+              <td class="summary-item-field-first">
+                <span>Additional terms and conditions</span>
+              </td>
+              <td class="summary-item-field">
+                <span>
+                  
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+      <div class="grid-row">
+        <div class="column-two-thirds">
+          <h2 class="summary-item-heading" id="opportunity-attributes-5">
+            Skills and experience
+          </h2>
+          <p class="summary-item-description">
+            Buyers will use the essential and nice-to-have skills and experience to help them evaluate suppliers’ technical competence.
+          </p>
+        </div>
+        <div class="column-one-whole">
+          <table class="summary-item-body">
+            <caption class="visuallyhidden">
+              Skills and experience
+            </caption>
+            <thead class="summary-item-field-headings">
+              <tr>
+                <th scope="col" class="summary-item-field-heading-first">
+                  <span class="visuallyhidden">Opportunity attribute name</span>
+                </th>
+                <th scope="col" class="summary-item-field-heading">
+                  <span class="visuallyhidden">Opportunity attribute value</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="summary-item-row">
+                <td class="summary-item-field-first">
+                  <span>Essential skills and experience</span>
+                </td>
+                <td class="summary-item-field">
+                  <span>
+                    <ul>
+                      
+                      <li>Demonstrable experience of delivering successful Pre Discovery and Discovery outcomes to support complex digital transformation in a service delivery organisation - 5 points.</li>
+                      
+                      <li>Demonstrable experience of delivering savings through digital transformation projects including quick wins and actionable roadmaps through the Discovery phase - 5 points.</li>
+                      
+                      <li>Full understanding and demonstrable experience of research methodologies and data collection techniques for complex, high volume, citizen facing, transactional services - 5 points.</li>
+                      
+                      <li>Able to deploy an effective team ready to hit the ground running no later than 15th August 2016 - 5 points.</li>
+                      
+                      <li>Demonstrable experience of working with users and stakeholders at all levels in complex political environments - 2 points.</li>
+                      
+                      <li>Demonstrable experience of carrying out research with a diverse mix of users including those with low digital literacy and assisted digital needs - 2 points.</li>
+                      
+                      <li>Demonstrable experience of knowledge sharing and skills transfer with in-house teams so as to build sustainable capability - 2 points.</li>
+                      
+                      <li>Demonstrable experience of working successfully with incumbent legacy vendors and in-house ICT as part of Discoveries to support digital transformation - 2 points.</li>
+                      
+                      <li>Demonstrable experience of delivering working prototypes during a discovery phase that exemplify the digital vision and strategy - 2 points.</li>
+                      
+                      <li>Proven ability to lead and coach public sector organisations through the digital transformation process aligned with the Digital by Default standard - 2 point.</li>
+                      
+                    </ul>
+                  </span>
+                </td>
+              </tr>
+              <tr class="summary-item-row">
+                <td class="summary-item-field-first">
+                  <span>Nice-to-have skills and experience</span>
+                </td>
+                <td class="summary-item-field">
+                  <span>
+                    <ul>
+                      
+                      <li>Previous experience in public sector transformation programme - 1 point.</li>
+                      
+                      <li>Strong experience of delivering projects in line with the Government Digital Service’s Design Principles and Digital Service Standard - 1 point.</li>
+                      
+                      <li>Demonstrable experience of research methodologies; ethnography, open and closed card sorting, multivariate testing - 1 point.</li>
+                      
+                      <li>Strong understanding of the approach other local authorities are taking with digital and of the benefits this provides - 1 point.</li>
+                      
+                    </ul>
+                  </span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+
+
+      <h2 class="summary-item-heading" id="opportunity-attributes-6">
+        How suppliers will be evaluated
+      </h2>
+      <table class="summary-item-body">
+        <caption class="visuallyhidden">
+          How suppliers will be evaluated
+        </caption>
+        <thead class="summary-item-field-headings">
+          <tr>
+            <th scope="col" class="summary-item-field-heading-first">
+              <span class="visuallyhidden">Opportunity attribute name</span>
+            </th>
+            <th scope="col" class="summary-item-field-heading">
+              <span class="visuallyhidden">Opportunity attribute value</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="summary-item-row">
+            <td class="summary-item-field-first">
+              <span>Maximum number of suppliers that will be evaluated</span>
+            </td>
+            <td class="summary-item-field">
+              <span>5</span>
+            </td>
+
+          </tr>
+          
+          <tr class="summary-item-row">
+            <td class="summary-item-field-first">
+              <span>Proposal criteria</span>
+            </td>
+            <td class="summary-item-field">
+              <span>
+                <ul>
+                  
+                  <li>Approach and methodology - 2 points</li>
+                  
+                  <li>A plan that sets out the overall timescales - 2 points</li>
+                  
+                  <li>Approach to knowledge transfer - 2 points</li>
+                  
+                  <li>Team structure - 2 points</li>
+                  
+                  <li>Value for money - 2 points</li>
+                  
+                  <li>Critical success factors - 2 points</li>
+                  
+                  <li>Top level risks and assumptions. - 2 points</li>
+                  
+                </ul>
+              </span>
+            </td>
+          </tr>
+          
+          <tr class="summary-item-row">
+            <td class="summary-item-field-first">
+              <span>Cultural fit criteria</span>
+            </td>
+            <td class="summary-item-field">
+              <span>
+                <ul>
+                  
+                  <li>Work as part of a team with our organisation and other suppliers - 4 points</li>
+                  
+                  <li>Be transparent and collaborative when making decisions and recommendations - 2 points</li>
+                  
+                  <li>Have a no-blame culture and encourage people to learn from their mistakes - 2 points</li>
+                  
+                  <li>Share knowledge and experience with other team members - 2 points</li>
+                  
+                  <li>Demonstrate commitment to excellence and improvement by seeking actionable feedback, setting targets etc - 2 points</li>
+                  
+                  <li>Demonstrate courage by being able to express controversial views, confront reality, make tough decisions, question actions inconsistent with group behaviours, being candid about progress/estimates - 2 points</li>
+                  
+                  <li>Demonstrate vulnerability by declaring uncertainty, fear, recognise mistakes, apologise, acknowledge weaknesses - 2 points</li>
+                  
+                  <li>Demonstrate responsibility by act like a leader, serve your team, provide solutions to problems, engage in external/internal environments, seek the best for the organisation beyond your team - 2 points</li>
+                  
+                  <li>Demonstrate simplicity by taking simple steps to goals, do less but better, mitigate failures, talk straight with respect - 2 points</li>
+                  
+                </ul>
+              </span>
+            </td>
+
+          </tr>
+          <tr class="summary-item-row">
+            <td class="summary-item-field-first">
+              <span>Payment approach</span>
+            </td>
+            <td class="summary-item-field">
+              <span>Fixed price</span>
+            </td>
+
+          </tr>
+          <tr class="summary-item-row">
+            <td class="summary-item-field-first">
+              <span>Assessment methods</span>
+            </td>
+            <td class="summary-item-field">
+              <span>
+                <ul>
+                  
+                  <li>Work history</li>
+                  
+                  <li>written proposal</li>
+                  
+                </ul>
+              </span>
+            </td>
+
+          </tr>
+          <tr class="summary-item-row">
+            <td class="summary-item-field-first">
+              <span>Evaluation weighting</span>
+            </td>
+            <td class="summary-item-field">
+              <span>
+                <div class="multiquestion">
+                  <p>Technical competence</p>
+                  <div>60%</div>
+                </div>
+                <div class="multiquestion">
+                  <p>Cultural fit</p>
+                  <div>20%</div>
+                </div>
+                <div class="multiquestion">
+                  <p>Price</p>
+                  <div>20%</div>
+                </div>
+              </span>
+            </td>
+          </tr>
+          <tr class="summary-item-row">
+            <td class="summary-item-field-first">
+              <span>Estimated date shortlisting ends</span>
+            </td>
+            <td class="summary-item-field">
+              <span id="shortlistingDateDisplay">undefined NaN undefined</span>
+            </td>
+          </tr>
+          <tr class="summary-item-row">
+            <td class="summary-item-field-first">
+              <span>Estimated date evaluation ends</span>
+            </td>
+            <td class="summary-item-field">
+              <span id="evaluationDateDisplay">undefined NaN undefined</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+
+  
+</main>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-medium">
+        Have you awarded a contract for ‘{{opportunities[opportunity_id].name}}’?
+      </h1>
+      <p>
+        We need to know if you’ve awarded a contract for ‘{{opportunities[opportunity_id].name}}’. 
+        <br><br>
+        <a href="/award/login/award?opportunity_id=1&opportunity_2_id=0">Tell us if you awarded a contract</a>
+        <br><br>
+        You must tell us even if you haven’t awarded a contract yet.
+        <br><br>
+        Knowing this will help us make the buying process more transparent. The name of the winning supplier will be shown on the Digital Marketplace.
+
+        <br><br><br>
+         
+        If you’ve got any questions, email <a href="">enquiries@digitalmarketplace.service.gov.uk</a>
+        <br><br>
+        Thanks,
+        <br>
+        The Digital Marketplace team
+      </p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

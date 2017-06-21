@@ -9,19 +9,18 @@
 <main id="content" role="main">
 
   <div class="breadcrumbs">
-  <ol>
-    <li><a href="/docs">Digital Marketplace</a></li>
-  </ol>
-
-</div>
+    <ol>
+      <li><a href="/award/email/award?opportunity_id=1">Digital Marketplace</a></li>
+    </ol>
+  </div>
 
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <form action="/award/suppliers/award" method="post" class="form">
+      <form action="/award/dashboard/award" method="post" class="form">
 
         <h1 class="heading-large">
-          Did you award a contract for '{{opportunities[opportunity_id].name}}'?
+          Did you award a contract for '{{opportunities[data['opportunity_id']].name}}'?
         </h1>
         <br>
 
@@ -55,29 +54,19 @@
             </div>
 
             <div class="panel panel-border-narrow js-hidden" id="why-not" aria-hidden="true">
-              <label class="form-label" for="nationalities-other-country">What is the status of the requirement?</label>
+              <label class="form-label" for="nationalities-other-country">Do you still want to award this contract?</label>
               <br>
-              <div class="multiple-choice" data-target="why-not">
-                <input id="radio-3" type="radio" name="radio-group-2" value="shortlisting">
-                <label for="radio-3">We are still shortlisting</label>
+              <div class="multiple-choice">
+                <input id="radio-3" type="radio" name="radio-group-2" value="in progress">
+                <label for="radio-3">Yes</label>
               </div>
-              <div class="multiple-choice" data-target="why-not">
-                <input id="radio-4" type="radio" name="radio-group-2" value="evaluating">
-                <label for="radio-4">We are still evaluating</label>
+              <div class="multiple-choice">
+                <input id="radio-4" type="radio" name="radio-group-2" value="withdrawn">
+                <label for="radio-4">No</label>
               </div>
-
-              <div class="multiple-choice" data-target="why-not">
-                <input id="radio-5" type="radio" name="radio-group-2" value="withdrawn">
-                <label for="radio-5">We are not going ahead with the contract</label>
-              </div>
-
             </div>
 
           </fieldset>
-              <div class="multiple-choice visually-hidden">
-                <input id="opportunity_id" type="radio" name="opportunity_id" value="1">
-                <label for="opportunity_id"></label>
-              </div>
         </div>
         <div class="form-group">
           <input type="submit" class="button" value="Submit">

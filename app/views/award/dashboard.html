@@ -16,31 +16,120 @@
 </div>
 
   <div class="grid-row">
-    <div class="column-two-thirds">
-    {% if opportunities[data['opportunity_id']] %}
+    <div class="column-one-whole">
+      {% if data['award-status'] == "yes" %}
 
-      <div class="banner-success-without-action">
-        <p class="banner-message">
-          You've updated the status for '{{opportunities[data['opportunity_id']].name}}'
-        </p>
-      </div>
+        <div class="banner-success-without-action">
+          <p class="banner-message">
+            You've updated '{{opportunities[data['opportunity_id']].name}}'
+          </p>
+        </div>
 
-    {% endif %}
-
-
-    <header class="page-heading page-heading-with-context page-heading-without-breadcrumb">
-      <p class="context">
-        laurence.berry+12@digital.cabinet-office.gov.uk
-      </p>
-      <h1>
-        Laurence Test
-      </h1>
-    </header>
-
-
+      {% endif %}
     </div>
-  </div>
-</main>
+
+    <div class="column-two-thirds">
+
+      <header class="page-heading page-heading-with-context page-heading-without-breadcrumb">
+        <p class="context">
+          test.user@home-office.gov.uk
+        </p>
+        <h1>
+          Home Office
+        </h1>
+      </header>
+
+      </div>
+    </div>
+
+
+    <h2 class="summary-item-heading" id="unpublished_requirements"> 
+      Unpublished requirements
+    </h2>
+
+    <p class="summary-item-no-content">
+      You don’t have any unpublished requirements
+    </p>
+
+    <h2 class="summary-item-heading" id="published_requirements">
+      Published requirements
+    </h2>
+    
+    <p class="summary-item-no-content">
+      You dont have any published requirements
+    </p>
+
+<h2 class="summary-item-heading" id="closed_requirements">
+      
+      Closed requirements
+  </h2>
+
+
+    <table class="summary-item-body table-type">
+    <caption class="visually-hidden">
+      Published requirements caption
+    </caption>
+    <thead class="summary-item-field-headings-visible">
+      <tr>
+        <th scope="col" class="summary-item-field-heading-first-half" >            
+          Name
+        </th>
+        
+        <th scope="col" class="summary-item-field-heading">
+          Closed
+        </th>
+
+        <th scope="col" class="summary-item-field-heading">    
+          <span class="hidden">Make a copy</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="summary-item-row">      
+        <td class="summary-item-field-first-half">
+          <span><a href="/award/opportunity/award">{{opportunities[data['opportunity_id']].name}}</a></span>
+        </td>
+        <td class="summary-item-field">
+          <span>Monday 3 July 2017</span>
+        </td>
+        <td class="summary-item-field-with-action">
+          <a href="">View responses</a><br>
+          <div style="margin-top: 5px"></div>
+          {% if data['award-status'] != "yes" %}
+            <a href="/award/status/award">Have you awarded a contract?</a>
+            <div style="margin-top: 8px"></div>
+          {% endif %}
+          <span><form method="post" action="">
+            <input type="hidden" name="csrf_token" value="##c6926d31659b25bca0956dae7b5af6e11307478b">
+            <button type="submit" class="button-secondary">Make a copy</button>
+          </form></span>
+        </td>
+      </tr>
+      <tr class="summary-item-row">      
+        <td class="summary-item-field-first-half">
+          <span><a href="/award/opportunity/award">{{opportunities[data['opportunity_2_id']].name}}</a></span>
+        </td>
+        <td class="summary-item-field">
+          <span>Monday 3 July 2017</span>
+        </td>
+        <td class="summary-item-field-with-action">
+          <a href="">View responses</a><br>
+          <div style="margin-top: 5px"></div>
+          {% if data['award-2-status'] != "yes" %}
+            <a href="/award/status/award">Have you awarded a contract?</a>
+            <div style="margin-top: 8px"></div>
+          {% endif %}
+          <span><form method="post" action="/buyers/frameworks/digital-outcomes-and-specialists-2/requirements/digital-outcomes/6235/copy">
+            <input type="hidden" name="csrf_token" value="##c6926d31659b25bca0956dae7b5af6e11307478b">
+            <button type="submit" class="button-secondary">Make a copy</button>
+          </form></span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+
+    </main>
 
 {% endblock %}
 

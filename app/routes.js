@@ -23,9 +23,6 @@ router.get('/award/:page/:yml', function (req, res) {
 
   templateData.storedValues = req.cookies;
 
-  console.log("--- GET", req.path);
-  console.log(JSON.stringify(templateData, null, '  '));
-
   res.render(
     "award/" + req.params.page,
     templateData

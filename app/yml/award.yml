@@ -1,92 +1,80 @@
 opportunities:
-  - opportunity: 1
-    name: Technical Architect
+  - opportunity: 2
+    name: Digital Diagnostic
     status: shortlisting
     applications:
       - application: 
-        name: Test Supplier 1
+        name: Deloitte LLP
         id: 1 
       - application: 
-        name: Test Supplier 2
+        name: Sailpoint
         id: 2
       - application: 
-        name: Test Supplier 3
+        name: Wanstor Ltd
         id: 3 
 
 
-  - opportunity: 2
-    name: Technical Architect
+  - opportunity: 3
+    name: Digital Customer Programme Discovery Phase
     status: shortlisting
     applications:
       - application: 
-        name: Test Supplier 4
+        name: Aasonn Limited
         id: 4
       - application: 
-        name: Test Supplier 5
+        name: Accenture (UK) Limited
         id: 5
       - application: 
-        name: Test Supplier 6
+        name: Caltech IT Ltd
         id: 6 
       - application: 
-        name: Test Supplier 4
-        id: 4
+        name: Capgemini UK plc
+        id: 7
       - application: 
-        name: Test Supplier 5
-        id: 5
+        name: Deloitte LLP
+        id: 8
       - application: 
-        name: Test Supplier 6
-        id: 6 
+        name: Field Dynamics
+        id: 9 
       - application: 
-        name: Test Supplier 4
-        id: 4
+        name: IBM United Kingdom Ltd
+        id: 10
       - application: 
-        name: Test Supplier 5
-        id: 5
+        name: Made Tech Ltd
+        id: 11
       - application: 
-        name: Test Supplier 6
-        id: 6 
+        name: Maintel Europe Limited
+        id: 12
       - application: 
-        name: Test Supplier 4
-        id: 4
+        name: NanoIT Solutions Ltd
+        id: 13
       - application: 
-        name: Test Supplier 5
-        id: 5
+        name: pam
+        id: 14
       - application: 
-        name: Test Supplier 6
-        id: 6 
+        name: Parilitas Ltd
+        id: 15
       - application: 
-        name: Test Supplier 4
-        id: 4
+        name: Parker Fitzgerald
+        id: 16
       - application: 
-        name: Test Supplier 5
-        id: 5
+        name: Rainmaker Solutions
+        id: 17
       - application: 
-        name: Test Supplier 6
-        id: 6 
+        name: Sailpoint
+        id: 18
       - application: 
-        name: Test Supplier 4
-        id: 4
+        name: Salesforce.com
+        id: 19
       - application: 
-        name: Test Supplier 5
-        id: 5
+        name: Salt
+        id: 20
       - application: 
-        name: Test Supplier 6
-        id: 6 
+        name: Sapient Ltd
+        id: 21
       - application: 
-        name: Test Supplier 4
-        id: 4
+        name: UKFast
+        id: 22
       - application: 
-        name: Test Supplier 5
-        id: 5
-      - application: 
-        name: Test Supplier 6
-        id: 6 
-      - application: 
-        name: Test Supplier 4
-        id: 4
-      - application: 
-        name: Test Supplier 5
-        id: 5
-      - application: 
-        name: Test Supplier 6
-        id: 6 
+        name: Wanstor Ltd
+        id: 23
