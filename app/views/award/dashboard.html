@@ -17,15 +17,13 @@
 
   <div class="grid-row">
     <div class="column-one-whole">
-      {% if data['award-status'] == "yes" %}
 
-        <div class="banner-success-without-action">
-          <p class="banner-message">
-            You've updated '{{opportunities[data['opportunity_id']].name}}'
-          </p>
-        </div>
+      <div class="banner-success-without-action">
+        <p class="banner-message">
+          You've updated '{{opportunities[data['opportunity_id']].name}}'
+        </p>
+      </div>
 
-      {% endif %}
     </div>
 
     <div class="column-two-thirds">
