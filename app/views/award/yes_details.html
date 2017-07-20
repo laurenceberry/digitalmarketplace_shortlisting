@@ -21,7 +21,7 @@
       <form action="/award/dashboard/award" method="post" class="form">
 
         <h1 class="heading-large">
-          Tell us about your contract with [Supplier name]
+          Tell us about your contract with {{data['awarded_supplier']}}
         </h1>
         <br>
 
@@ -43,7 +43,7 @@
 
                 <fieldset class="inline-block" id="dateq1" >
 
-                    <div class="date-field-container">
+                    <div class="date-field-container" style="width: 65px; display: inline-block; margin-right: 15px">
                       <label for="input-dateq1-day">Day</label>
                       <input
                         id="input-dateq1-day"
@@ -56,7 +56,7 @@
                       />
                     </div>
                   
-                    <div class="date-field-container">
+                    <div class="date-field-container" style="width: 65px; display: inline-block; margin-right: 15px">
                       <label for="input-dateq1-month">Month</label>
                       <input
                         id="input-dateq1-month"
@@ -69,7 +69,7 @@
                       />
                     </div>
                   
-                    <div class="date-field-container">
+                    <div class="date-field-container" style="width: 100px; display: inline-block;">
                       <label for="input-dateq1-year">Year</label>
                       <input
                         id="input-dateq1-year"
@@ -106,7 +106,7 @@
                 £
               </label>
               <input
-                type="text"
+                type="number"
                 class="text-box-with-unit-before"
                 name="price"
                 id="input-price-60"

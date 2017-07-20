@@ -17,11 +17,12 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <form action="/award/details/award" method="post" class="form">
+      <form action="/award/yes_details/award" method="post" class="form">
 
         <h1 class="heading-large">
-          Did you award a contract for '{{opportunities[data['opportunity_id']].name}}'?
-        </h1>
+          Have you awarded a contract for '{{opportunities[data['opportunity_id']].name}}'?
+        </h1><br>
+        <p class="padding-bottom">This will help us make the buying process more transparent. The information you provide will be shown on the opportunity.</p>
         <br>
 
         <div class="form-group">
@@ -51,19 +52,6 @@
             <div class="multiple-choice" data-target="why-not">
               <input id="radio-2" type="radio" name="award-status" value="no">
               <label for="radio-2">No</label>
-            </div>
-
-            <div class="panel panel-border-narrow js-hidden" id="why-not" aria-hidden="true">
-              <label class="form-label" for="nationalities-other-country">Do you still want to award this contract?</label>
-              <br>
-              <div class="multiple-choice">
-                <input id="radio-3" type="radio" name="radio-group-2" value="in progress">
-                <label for="radio-3">Yes</label>
-              </div>
-              <div class="multiple-choice">
-                <input id="radio-4" type="radio" name="radio-group-2" value="withdrawn">
-                <label for="radio-4">No</label>
-              </div>
             </div>
 
           </fieldset>

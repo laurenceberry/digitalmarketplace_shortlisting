@@ -17,12 +17,19 @@
 
   <div class="grid-row">
     <div class="column-one-whole">
-
+    {% if error == "true" %}
+      <div class="banner-information-without-action">
+        <p class="banner-message">
+          You've already updated '{{opportunities[data['opportunity_id']].name}}'
+        </p>
+      </div>
+    {% else %}
       <div class="banner-success-without-action">
         <p class="banner-message">
           You've updated '{{opportunities[data['opportunity_id']].name}}'
         </p>
       </div>
+    {% endif %}
 
     </div>
 
