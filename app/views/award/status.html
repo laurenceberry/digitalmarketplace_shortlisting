@@ -20,24 +20,16 @@
       <form action="/award/yes_details/award" method="post" class="form">
 
         <h1 class="heading-large">
-          Have you awarded a contract for '{{opportunities[data['opportunity_id']].name}}'?
+          Who won the '{{opportunities[data['opportunity_id']].name}}' contract?
         </h1><br>
-        <p class="padding-bottom">This will help us make the buying process more transparent. The information you provide will be shown on the opportunity.</p>
+        <p class="question-advice">The information you provide will be shown on the opportunity. This makes the buying process more transparent.</p>
         <br>
 
         <div class="form-group">
           <fieldset>
 
-            <legend class="visually-hidden">Have you awarded a contract for '{{opportunities[opportunity_id].name}}'</legend>
-
-            <div class="multiple-choice" data-target="who">
-              <input id="radio-1" type="radio" name="award-status" value="yes">
-              <label for="radio-1">Yes</label>
-            </div>
-
-            <div class="panel panel-border-narrow js-hidden" id="who" aria-hidden="true" style="margin-bottom: 25px">
-              <label class="form-label" for="nationalities-other-country">Who did you award the contract to?</label>
-              <br>
+            <div class="" id="who" aria-hidden="true" style="margin-bottom: 25px">
+              <label class="form-label visually-hidden" for="nationalities-other-country">Who won the '{{opportunities[data['opportunity_id']].name}}' contract?</label>
 
               {% for application in opportunities[data['opportunity_id']].applications %}
 
@@ -47,11 +39,6 @@
                 </div>
               {% endfor %}
 
-            </div>
-
-            <div class="multiple-choice" data-target="why-not">
-              <input id="radio-2" type="radio" name="award-status" value="no">
-              <label for="radio-2">No</label>
             </div>
 
           </fieldset>

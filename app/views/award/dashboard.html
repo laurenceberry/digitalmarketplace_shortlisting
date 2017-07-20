@@ -92,7 +92,7 @@
     <tbody>
       <tr class="summary-item-row">      
         <td class="summary-item-field-first-half">
-          <span><a href="/award/opportunity/award">{{opportunities[data['opportunity_id']].name}}</a></span>
+          <span><a href="/award/overview/award">{{opportunities[data['opportunity_id']].name}}</a></span>
         </td>
         <td class="summary-item-field">
           <span>Monday 3 July 2017</span>
@@ -101,7 +101,7 @@
           <a href="">View responses</a><br>
           <div style="margin-top: 5px"></div>
           {% if data['award-status'] != "yes" %}
-            <a href="/award/status/award">Have you awarded a contract?</a>
+            <a href="/award/status/award">Tell us who won this contract</a>
             <div style="margin-top: 8px"></div>
           {% endif %}
           <span><form method="post" action="">
@@ -112,7 +112,7 @@
       </tr>
       <tr class="summary-item-row">      
         <td class="summary-item-field-first-half">
-          <span><a href="/award/opportunity/award">{{opportunities[data['opportunity_2_id']].name}}</a></span>
+          <span><a href="/award/overview/award">{{opportunities[data['opportunity_2_id']].name}}</a></span>
         </td>
         <td class="summary-item-field">
           <span>Monday 3 July 2017</span>
@@ -121,7 +121,7 @@
           <a href="">View responses</a><br>
           <div style="margin-top: 5px"></div>
           {% if data['award-2-status'] != "yes" %}
-            <a href="/award/status/award">Have you awarded a contract?</a>
+            <a href="/award/status/award">Tell us who won this contract</a>
             <div style="margin-top: 8px"></div>
           {% endif %}
           <span><form method="post" action="/buyers/frameworks/digital-outcomes-and-specialists-2/requirements/digital-outcomes/6235/copy">
