@@ -1,0 +1,44 @@
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-medium">
+        Update ‘{{opportunities[opportunity_id].name}}’?
+      </h1>
+      <p>
+        Dear buyer,
+        <br><br>
+        Did you award a contract for ‘{{opportunities[opportunity_id].name}}’? You need to tell us even if you didn’t award the contract. 
+        <br>
+        <h2 class="heading-small">Did you award this contract?</h2>
+        <a href="/award/login/award?opportunity_id=1&opportunity_2_id=0">https://digitalmarketplace.service.gov.uk/suppliers/award?opportunity=1001</a>
+        <br><br>
+        You can also update this information at any time on the Digital Marketplace at
+        <a href="">https://digitalmarketplace.service.gov.uk/suppliers</a>
+        <br><br>
+        This will help us make the buying process more transparent. The information you provide will be shown on the opportunity.
+
+        <br><br>
+         
+        Email <a href="">enquiries@digitalmarketplace.service.gov.uk</a> with any questions.
+        <br><br>
+        Thanks,
+        <br>
+        The Digital Marketplace team
+      </p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+
