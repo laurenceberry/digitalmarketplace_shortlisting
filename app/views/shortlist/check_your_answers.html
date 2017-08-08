@@ -20,10 +20,11 @@
       <form action="/award/overview/award" method="post" class="form">
 
         <h1 class="heading-large">
-          Your shortlisted suppliers for '{{opportunities[data['opportunity_id']].name}}'
+          Your shortlisted suppliers
         </h1><br>
 
         <p class="">
+          Shortlisted suppliers for {{opportunities[data['opportunity_id']].name}}:
           <ul class="list-bullet">
             {% for item in data['shortlisted_suppliers']%}
               <li>{{item}}</li>
@@ -31,11 +32,20 @@
           </ul>
         </p>
         <br>
-
-        <div class="form-group">
-          <input type="submit" class="button-save" value="Save">
-          <a href="javascript:history.back();">Previous page</a>
-        </div>
+        <p class="padding-bottom-small"> 
+          Contact these suppliers to let them know they’ve been shortlisted.
+        </p>
+        <p>
+          Unsuccessful suppliers will be notified automatically, but you still need to contact them to give them feedback. 
+        </p>
+        {% if complete == "true" %}
+          <a href="javascript:history.back();">Return to overview</a>
+        {% else %}
+          <div class="form-group">
+            <input type="submit" class="button-save" value="Save">
+            <a href="javascript:history.back();">Previous page</a>
+          </div>
+        {% endif %}
       </form>
 
 

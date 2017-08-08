@@ -96,11 +96,18 @@
             <p class="instruction-list-item-extra-information">After the application deadline, shortlist the suppliers who applied.</p>
             <ul class="instruction-list-item-extra-information instruction-list-item-top">
               <li>
-                <a href="../responses/opportunities-with-evidence?filetype=ggl&amp;opportunity=1">View and shortlist suppliers</a>
+                <a href="/shortlist/download/award">View and shortlist suppliers</a>
               </li>
-             <li>
-                <a href="/shortlist/status/award">Tell us who you shortlisted</a>
-              </li>
+              {% if data['shortlisted_suppliers'] %}
+               <li>
+                  <a href="/shortlist/check_your_answers/award?complete=true">Shortlisted suppliers</a>
+                </li>
+              {% else %}
+               <li>
+                  <a href="/shortlist/status/award?opportunity_id=1">Tell us who you shortlisted</a>
+                </li>
+              {% endif %}
+
             </ul>
           </li>
           <li class="instruction-list-item divider">

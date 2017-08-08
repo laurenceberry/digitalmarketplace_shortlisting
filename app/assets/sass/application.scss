@@ -39,10 +39,18 @@ table{
   }
 }
 
-strong{
+strong, .visual-emphasis{
   font-weight: bold;
 }
 
 .search-summary{
   margin-bottom: 5px !important;
+}
+
+.padding-bottom, .margins{
+  padding-bottom: 30px;
+}
+
+.padding-bottom-small{
+  padding-bottom: 10px;
 }
