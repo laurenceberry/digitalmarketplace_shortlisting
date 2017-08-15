@@ -47,3 +47,21 @@ router.get('/shortlist/:page/:yml', function (req, res) {
   );
 
 });
+
+router.get('/supplier/:page/:yml', function (req, res) {
+  var templateData = yaml.safeLoad(
+    fs.readFileSync(__dirname + '/yml/' + req.params.yml + '.yml', {encoding: 'utf-8'})
+  );
+
+  Object.keys(req.query).map(function(key) {
+    templateData[key] = req.query[key];
+  });
+
+  templateData.storedValues = req.cookies;
+
+  res.render(
+    "supplier/" + req.params.page,
+    templateData
+  );
+
+});
