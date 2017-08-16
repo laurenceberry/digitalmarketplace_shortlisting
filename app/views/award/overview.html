@@ -10,7 +10,8 @@
 
   <div class="breadcrumbs">
     <ol>
-      <li><a href="/award/dashboard/award">Digital Marketplace</a></li>
+      <li><a href="">Digital Marketplace</a></li>
+      <li><a href="/award/dashboard/award">Your account</a></li>
     </ol>
   </div>
 
@@ -53,28 +54,14 @@
               Decide your shortlist, evaluation and supplier start dates.</p>
 
               <ul class="instruction-list-item-extra-information instruction-list-item-top">
-<!--                 <li> 
-                  <span class="tick">
-                    <img src="https://www.dropbox.com/s/26tp2p4oodcybiw/tick.svg?dl=1" alt="done" width="15" height="14">
-                  </span>             
-                  <a class="instruction-list-item-extra-information  instruction-list-item-top" href="">
-                    Describe question and answer session
-                  </a>
-                </li> -->
                 <li> 
 
-                  
-<!--                   <a class="instruction-list-item-extra-information  instruction-list-item-top" href="../timeline/dos-opportunities?opportunity=1">
-                    Review and publish your requirements
-                  </a> -->
-
+                
                   <a class="instruction-list-item-extra-information  instruction-list-item-top" href="/award/opportunity/award">
                     View your opportunity
                   </a>
                 </li>
-<!--                 <li>
-                  <a href="../publish/dos-opportunities?opportunity=1&published=false">Review and publish your requirements</a>
-                </li> -->
+
               </ul>
             
 
@@ -105,13 +92,13 @@
               <li>
                 <a href="/shortlist/download/award">View and shortlist suppliers</a>
               </li>
-              {% if data['shortlisted_suppliers'] %}
+              {% if data['shortlisted_suppliers'] or data['opportunity_id'] == 1 %}
                <li>
                   <a href="/shortlist/check_your_answers/award?complete=true">Shortlisted suppliers</a>
                 </li>
               {% else %}
                <li>
-                  <a href="/shortlist/status/award?opportunity_id=1">Let us know the results of shortlisting</a>
+                  <a href="/shortlist/status/award?opportunity_id={{opportunity_id}}">Let us know the results of shortlisting</a>
                 </li>
               {% endif %}
             </ul>
@@ -139,8 +126,9 @@
               <li>
                 <a href="https://www.gov.uk/government/publications/digital-outcomes-and-specialists-call-off-contract">View the Digital Outcomes and Specialists contract</a>
               </li>
+
               <li>
-                <a href="/award/status/award">Tell us who won the contract</a>
+                <a href="/award/status/award?opportunity_id={{opportunity_id}}">Tell us who won the contract</a>
               </li>
             </ul>
           </li>

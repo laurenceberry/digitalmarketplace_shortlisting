@@ -9,21 +9,13 @@
 <main id="content" role="main">
 
   <div class="breadcrumbs">
-  <ol>
-    <li><a href="/docs">Digital Marketplace</a></li>
-  </ol>
-
-</div>
-
+    <ol>
+      <li><a href="">Digital Marketplace</a></li>
+    </ol>
+  </div>
   <div class="grid-row">
     <div class="column-one-whole">
-    {% if error == "true" %}
-      <div class="banner-information-without-action">
-        <p class="banner-message">
-          You've already updated '{{opportunities[data['opportunity_id']].name}}'
-        </p>
-      </div>
-    {% else %}
+    {% if data['award-status']|length >= 1 %}
       <div class="banner-success-without-action">
         <p class="banner-message">
           You've updated '{{opportunities[data['opportunity_id']].name}}'
@@ -92,16 +84,22 @@
     <tbody>
       <tr class="summary-item-row">      
         <td class="summary-item-field-first-half">
-          <span><a href="/award/overview/award">{{opportunities[data['opportunity_id']].name}}</a></span>
+          <span><a href="/award/overview/award?opportunity_id={{data['opportunity_1_id']}}">{{opportunities[data['opportunity_1_id']].name}}</a></span>
         </td>
         <td class="summary-item-field">
           <span>Monday 3 July 2017</span>
         </td>
         <td class="summary-item-field-with-action">
-          <a href="">View responses</a><br>
-          <div style="margin-top: 5px"></div>
-          {% if data['award-status'] != "yes" %}
-            <a href="/shortlist/status/award">Let us know the results of shortlisting</a>
+          
+          {% if data['shortlisted_suppliers'] %}
+            {% if data['award-status-0']|length == 0 %}
+              <a href="/award/status/award?opportunity_id={{data['opportunity_1_id']}}">Tell us who won this contract</a>
+              <div style="margin-top: 8px"></div>
+            {% endif %}
+          {% else %}
+            <a href="/shortlist/download/award?opportunity_id={{data['opportunity_1_id']}}">View responses</a><br>
+            <div style="margin-top: 5px"></div>
+            <a href="/shortlist/status/award?opportunity_id={{data['opportunity_1_id']}}">Let us know the results of shortlisting</a>
             <div style="margin-top: 8px"></div>
           {% endif %}
           <span><form method="post" action="">
@@ -112,14 +110,14 @@
       </tr>
       <tr class="summary-item-row">      
         <td class="summary-item-field-first-half">
-          <span><a href="/award/overview/award">{{opportunities[data['opportunity_2_id']].name}}</a></span>
+          <span><a href="/award/overview/award?opportunity_id={{data['opportunity_2_id']}}">{{opportunities[data['opportunity_2_id']].name}}</a></span>
         </td>
         <td class="summary-item-field">
           <span>Monday 3 July 2017</span>
         </td>
         <td class="summary-item-field-with-action">
-          {% if data['award-2-status'] != "yes" %}
-            <a href="/award/status/award">Tell us who won this contract</a>
+          {% if data['award-status-1']|length == 0 %}
+            <a href="/award/status/award?opportunity_id={{data['opportunity_2_id']}}">Tell us who won this contract</a>
             <div style="margin-top: 8px"></div>
           {% endif %}
           <span><form method="post" action="/buyers/frameworks/digital-outcomes-and-specialists-2/requirements/digital-outcomes/6235/copy">
