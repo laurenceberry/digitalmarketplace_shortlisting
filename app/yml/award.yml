@@ -4,21 +4,6 @@ opportunities:
     status: shortlisting
     applications:
       - application: 
-        name: Deloitte LLP
-        id: 1 
-      - application: 
-        name: Sailpoint
-        id: 2
-      - application: 
-        name: Wanstor Ltd
-        id: 3 
-
-
-  - opportunity: 3
-    name: Digital Customer Programme Discovery Phase
-    status: shortlisting
-    applications:
-      - application: 
         name: Aasonn Limited
         id: 4
       - application: 
@@ -63,6 +48,26 @@ opportunities:
       - application: 
         name: Sailpoint
         id: 18
+      - application: 
+        name: Salesforce.com
+        id: 19
+      - application: 
+        name: Salt
+        id: 20
+      - application: 
+        name: Sapient Ltd
+        id: 21
+      - application: 
+        name: UKFast
+        id: 22
+      - application: 
+        name: Wanstor Ltd
+        id: 23
+
+  - opportunity: 3
+    name: Digital Customer Programme Discovery Phase
+    status: shortlisting
+    applications:
       - application: 
         name: Salesforce.com
         id: 19

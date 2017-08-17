@@ -30,6 +30,27 @@ router.get('/award/:page/:yml', function (req, res) {
 
 });
 
+
+router.post('/shortlist/suppliers/award', function (req, res) {
+
+  var shortlisting_status = req.body.shortlisting_status
+
+  console.log('shortlisting_status: ' + shortlisting_status)
+
+  if (shortlisting_status == 'yes') {
+    // redirect to the relevant page
+    res.redirect('/shortlist/suppliers/award')
+  } else if (shortlisting_status == 'no') {
+    // if over18 is any other value (or is missing) render the page requested
+    res.redirect('/shortlist/no_details/award')
+  } else {
+    // if over18 is any other value (or is missing) render the page requested
+    res.redirect('/award/overview/award')
+  }
+})
+
+
+
 router.get('/shortlist/:page/:yml', function (req, res) {
   var templateData = yaml.safeLoad(
     fs.readFileSync(__dirname + '/yml/' + req.params.yml + '.yml', {encoding: 'utf-8'})
