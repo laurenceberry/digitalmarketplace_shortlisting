@@ -22,15 +22,19 @@
       <form action="/award/overview/award" method="post" class="form">
 
         <h1 class="heading-large">
-          Why?
+          {% if awarding == "true" %}
+            Why didn't you award a contract for {{opportunities[data['opportunity_id']].name}}?
+          {% else %}
+            Why do you need to cancel {{opportunities[data['opportunity_id']].name}}?
+          {% endif %}
         </h1>
         <br>
 
+
        <div class="form-group">
-          <fieldset>
+          <fieldset class="padding-bottom">
 
             <legend class="visually-hidden">Have you awarded a contract for '{{opportunities[opportunity_2_id].name}}'</legend>
-
             <div class="" id="why-not" aria-hidden="true">
 <!--               <div class="multiple-choice">
                 <input id="radio-3" type="radio" name="radio-group-2" value="in progress">
@@ -42,13 +46,15 @@
               </div>
               <div class="multiple-choice">
                 <input id="radio-5" type="radio" name="radio-group-2" value="withdrawn">
-                <label for="radio-5">Requirement cancelled</label>
+                <label for="radio-5">The requirement has been cancelled</label>
               </div>
             </div>
 
           </fieldset>
-
-          <input type="submit" class="button-save" value="Submit">
+        <p class="">
+          Your requirement will be updated so suppliers can see it. You’ll still need to contact them to let them know what happened and give them feedback.
+        </p>
+          <input type="submit" class="button-save" value="Update requirement">
           <a href="javascript:history.back();">Previous page</a>
         </div>
       </form>

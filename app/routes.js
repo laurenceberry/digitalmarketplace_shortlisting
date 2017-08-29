@@ -12,6 +12,25 @@ router.get('/', function (req, res) {
 
 module.exports = router
 
+router.post('/award/suppliers/award', function (req, res) {
+
+  var award_status = req.body.award_status
+
+  console.log('award_status: ' + award_status)
+
+  if (award_status == 'yes') {
+    // redirect to the relevant page
+    res.redirect('/award/suppliers/award')
+  } else if (award_status == 'no') {
+    // if over18 is any other value (or is missing) render the page requested
+    res.redirect('/award/no_details/award?awarding=true')
+  } else {
+    // if over18 is any other value (or is missing) render the page requested
+    res.redirect('/award/overview/award')
+  }
+})
+
+
 router.get('/award/:page/:yml', function (req, res) {
   var templateData = yaml.safeLoad(
     fs.readFileSync(__dirname + '/yml/' + req.params.yml + '.yml', {encoding: 'utf-8'})

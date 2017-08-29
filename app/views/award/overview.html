@@ -18,9 +18,6 @@
     <div class="grid-row">
       <div class="column-one-whole">
         <header class="page-heading page-heading-with-context page-heading-without-breadcrumb">
-          <p class="context">
-            Overview
-          </p>
           <h1>
             {{opportunities[data['opportunity_id']].name}}
           </h1>
@@ -53,7 +50,15 @@
 
             
               <p class="instruction-list-item-extra-information">
-              <p>Your requirements closed for applications on Wednesday 16 August 2017 at 11:59pc GMT.</p>
+              <!-- <p>Your requirements closed for applications on Wednesday 16 August 2017 at 11:59pm GMT.</p> -->
+              <br>
+              <p class="sidebar-content">Done</p>
+              <!-- <p class="sidebar-content">Published on Digital Outcomes and Specialists 2</p> -->
+
+ <!--              <h2 class="heading-small">Framework</h2>
+              <p class="framework-name"><a href="https://www.gov.uk/government/publications/digital-outcomes-and-specialists-framework-agreement">Digital Outcomes and Specialists</a></p>
+ -->
+
               <ul class="instruction-list-item-extra-information instruction-list-item-top">
                 <li> 
 
@@ -84,7 +89,7 @@
             <h2 class="instruction-list-item-body">
               Shortlist
             </h2>
-            {% if data['shortlisted_suppliers'] or data['opportunity_id'] == 1 %}
+            {% if data['shortlisted_suppliers']%}
               <br>
               <p class="instruction-list-item-extra-information">Done</p>
 
@@ -93,7 +98,7 @@
                     <a href="/shortlist/check_your_answers/award?complete=true">View shortlisted suppliers</a>
                   </li>
             {% else %}
-              <p class="instruction-list-item-extra-information">After the application deadline, shortlist the suppliers who applied.</p>
+              <br>
               <ul class="instruction-list-item-extra-information instruction-list-item-top">
                 <li>
                   <a href="/shortlist/download/award">View and shortlist suppliers</a>
@@ -101,9 +106,9 @@
                 <li>
                   <a href="https://www.gov.uk/guidance/how-to-shortlist-digital-outcomes-and-specialists-suppliers">How to shortlist suppliers</a>
                 </li>
-                <li>
+<!--                 <li>
                   <a href="/shortlist/status/award?opportunity_id={{opportunity_id}}">Let us know the results of shortlisting</a>
-                </li>
+                </li> -->
               {% endif %}
             </ul>
           </li>
@@ -128,11 +133,11 @@
                 <a href="https://www.gov.uk/guidance/how-to-award-a-contract-when-you-buy-services">How to award a contract</a>
               </li>
               <li>
-                <a href="https://www.gov.uk/government/publications/digital-outcomes-and-specialists-call-off-contract">View the Digital Outcomes and Specialists contract</a>
+                <a href="https://www.gov.uk/government/publications/digital-outcomes-and-specialists-call-off-contract">Download the Digital Outcomes and Specialists contract</a>
               </li>
 
               <li>
-                <a href="/award/status/award?opportunity_id={{opportunity_id}}">Tell us who won the contract</a>
+                <a href="/award/status/award?opportunity_id={{opportunity_id}}">Let suppliers know what happened</a>
               </li>
             </ul>
           </li>
@@ -142,16 +147,9 @@
       <div class="column-one-third">
           
         <div id="requirements-meta">
-          <h2 class="heading-small">Published</h2>
-          <p class="sidebar-content">Wednesday 2 August 2017</p>
-          <h2 class="heading-small">Closed</h2>
-          <p class="sidebar-content">Wednesday 16 August 2017</p>
-          <h2 class="heading-small">Framework</h2>
-          <p class="framework-name"><a href="https://www.gov.uk/government/publications/digital-outcomes-and-specialists-framework-agreement">Digital Outcomes and Specialists</a></p>
 
           {% if data['award-status-'+opportunity_id]|length == 0 %}
-            <h2 class="heading-small">Cancel this requirement</h2>
-            <p>If the work is no longer going ahead or there were no suitable suppliers you can Cancel this requirement.</p>
+            <br>
             <a href="/award/no_details/award">Cancel requirement</a>
           {% endif %}
         </div>
@@ -160,11 +158,6 @@
 
 
     </div>
-    <div class="grid-row">
-     <div class="column-two-thirds">
-       <a href="">Delete</a>
-     </div>
-   </div>
  </main>
 
 {% endblock %}
