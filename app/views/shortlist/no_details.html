@@ -22,44 +22,33 @@
       <form action="/award/overview/award" method="post" class="form">
 
         <h1 class="heading-large">
-          {% if awarding == "true" %}
-            Why didn't you award a contract for {{opportunities[data['opportunity_id']].name}}?
-          {% else %}
-            Why do you need to cancel {{opportunities[data['opportunity_id']].name}}?
-          {% endif %}
+          Why did you not shortlist any suppliers for {{opportunities[data['opportunity_id']].name}}?
         </h1>
         <br>
 
-
        <div class="form-group">
-          <fieldset class="padding-bottom">
+          <fieldset>
 
-            <legend class="visually-hidden">Have you awarded a contract for '{{opportunities[opportunity_2_id].name}}'</legend>
+            <legend class="visually-hidden">Have you awarded a contract for '{{opportunities[opportunity_id].name}}'</legend>
+
             <div class="" id="why-not" aria-hidden="true">
 <!--               <div class="multiple-choice">
                 <input id="radio-3" type="radio" name="radio-group-2" value="in progress">
                 <label for="radio-3">Still in progress</label>
               </div> -->
               <div class="multiple-choice">
-                <input id="radio-5" type="radio" name="radio-group-2" value="withdrawn">
-                <label for="radio-5">The requirement has been cancelled</label>
-                <p class="hint">For example, if you don’t have the budget anymore or suitable suppliers dropped out.</p>
-
-              </div>
-              <div class="multiple-choice">
                 <input id="radio-4" type="radio" name="radio-group-2" value="no supplier">
                 <label for="radio-4">There were no suitable suppliers</label>
-                <p class="hint">For example, if no one who applied met the requirements.</p>
-
               </div>
-
+              <div class="multiple-choice">
+                <input id="radio-5" type="radio" name="radio-group-2" value="withdrawn">
+                <label for="radio-5">Requirement cancelled</label>
+              </div>
             </div>
 
           </fieldset>
-        <p class="">
-          Your requirement will be updated so suppliers can see it. You’ll still need to contact them to let them know what happened and give them feedback.
-        </p>
-          <input type="submit" class="button-save" value="Update requirement">
+
+          <input type="submit" class="button-save" value="Submit">
           <a href="javascript:history.back();">Previous page</a>
         </div>
       </form>

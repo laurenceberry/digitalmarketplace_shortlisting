@@ -1,0 +1,42 @@
+{% extends "layout_unbranded.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-medium">
+        You haven’t been shortlisted for {{opportunities[opportunity_id].name}}
+      </h1>
+      <br>
+      <p>
+        Dear supplier,
+        <br><br>
+        Thank you for applying to {{opportunities[opportunity_id].name}}.
+        <br><br>
+        Unfortunately, your application was unsuccessful. The buyer may be in touch with feedback. 
+        <br><br>
+        You can find this information on the Digital Marketplace at
+        <a href="">https://digitalmarketplace.service.gov.uk/suppliers/services/dos2</a>
+
+        <br><br><br>
+         
+        Email <a href="">enquiries@digitalmarketplace.service.gov.uk</a> with any questions.
+        <br><br>
+        Thanks,
+        <br>
+        The Digital Marketplace team
+      </p>
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

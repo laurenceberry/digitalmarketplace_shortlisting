@@ -19,35 +19,38 @@
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <form action="/award/yes_details/award" method="post" class="form">
+      <form action="/shortlist/check_your_answers/award" method="post" class="form">
 
         <h1 class="heading-large">
-          Who won the '{{opportunities[data['opportunity_id']].name}}' contract?
+          Who did you shortlist?
         </h1><br>
-
+        <p class="question-advice">Select the suppliers you shortlisted for {{opportunities[data['opportunity_id']].name}}.</p>
+        <br>
         <div class="form-group">
           <fieldset>
 
             <div class="" id="who" aria-hidden="true" style="margin-bottom: 25px">
-              <label class="form-label visually-hidden" for="nationalities-other-country">Who won the '{{opportunities[data['opportunity_id']].name}}' contract?</label>
+              <label class="form-label visually-hidden" for="shortlisted_suppliers">Who won the '{{opportunities[data['opportunity_id']].name}}' contract?</label>
 
               {% for application in opportunities[data['opportunity_id']].applications %}
 
                 <div class="multiple-choice">
-                  <input id="radio-{{application.id}}" type="radio" name="awarded_supplier" value="{{application.name}}">
-                  <label for="radio-{{application.id}}">{{application.name}}</label>
+                  <input id="checkbox-{{application.id}}" type="checkbox" name="shortlisted_suppliers" value="{{application.name}}">
+                  <label for="checkbox-{{application.id}}">{{application.name}}</label>
                 </div>
+
+
               {% endfor %}
 
             </div>
 
-
-        <div class="form-group">
-          <input type="submit" class="button-save" value="Save and continue">
-        <a href="javascript:history.back();">Previous page</a>
           </fieldset>
         </div>
+        <div class="form-group">
+          <input type="submit" class="button-save" value="Save and continue">
         </div>
+        <br>
+        <a href="javascript:history.back();">Previous page</a>
       </form>
 
 

@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK prototype kit
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+
+  <div class="breadcrumbs">
+    <ol>
+      <li><a href="">Digital Marketplace</a></li>
+      <li><a href="/award/dashboard/award">Your account</a></li>
+      <li><a href="/award/overview/award?opportunity_id={{data['opportunity_id']}}">{{opportunities[data['opportunity_id']].name}}</a></li>
+    </ol>
+  </div>
+  
+  <div class="grid-row">
+    <div class="column-two-thirds">
+
+      <form action="/award/overview/award" method="post" class="form">
+
+        <h1 class="heading-large">
+          Your shortlisted suppliers
+        </h1><br>
+
+        <p class="">
+          Shortlisted suppliers for {{opportunities[data['opportunity_id']].name}}:
+          <ul class="list-bullet">
+            {% for item in data['shortlisted_suppliers']%}
+              <li>{{item}}</li>
+            {% endfor %}
+          </ul>
+        </p>
+        <br>
+        <p class="padding-bottom-small"> 
+          You still need to contact these suppliers to let them know they’ve been shortlisted.
+        </p>
+        <p>
+          Unsuccessful suppliers will be notified automatically, but you still need to contact them to give them feedback. 
+        </p>
+        {% if complete == "true" %}
+          <br>
+          <ul class="document-list">        
+              <li class="document-list-item">
+                  <a href="https://docs.google.com/spreadsheets/d/1vUfZteJk8Ebjq1iT4cMkxxEdNwMDTc3cYgPb54iaGWs/edit?usp=sharing" class="document-link-with-icon" ,="" target="blank">
+                    <span class="document-icon">ods<span> document:</span></span>
+                    Download all supplier responses to this requirement
+                  </a>
+              </li>
+          </ul>
+          <br>
+          <a href="javascript:history.back();">Return to overview</a>
+        {% else %}
+          <div class="form-group">
+            <input type="submit" class="button-save" value="Save">
+            <a href="javascript:history.back();">Previous page</a>
+          </div>
+        {% endif %}
+      </form>
+
+
+    </div>
+  </div>
+</main>
+
+{% endblock %}
+
+

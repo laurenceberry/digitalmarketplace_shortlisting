@@ -39,10 +39,34 @@ table{
   }
 }
 
-strong{
+strong, .visual-emphasis{
   font-weight: bold;
 }
 
 .search-summary{
   margin-bottom: 5px !important;
+}
+
+.padding-bottom, .margins{
+  padding-bottom: 30px;
+}
+
+.padding-bottom-medium{
+  padding-bottom: 15px;
+}
+
+.padding-bottom-small{
+  padding-bottom: 10px;
+}
+
+.padding-bottom-x-small{
+  padding-bottom: 5px;
+}
+
+.instruction-list-item a{
+  text-decoration: none;
+}
+
+.heading-small{
+  margin-bottom: 0;
 }
